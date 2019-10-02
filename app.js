@@ -3,7 +3,7 @@ import compareNumbers from './compare-numbers.js';
 const guess = document.getElementById('guess');
 
 const submitButton = document.getElementById('submit-button');
-const numberOfTries = 3;
+let numberOfTries = 3;
 const correctNumber = 12;
 
 submitButton.addEventListener('click', () => {
@@ -12,9 +12,11 @@ submitButton.addEventListener('click', () => {
     
     if (upOrDown === 0){
         alert('You did it');
-    } else if (upOrDown === 1) {
+    } else if (upOrDown === 1 && numberOfTries > 0) {
         alert('Too High');
-    } else if (upOrDown === -1) {
+        numberOfTries --;
+    } else if (upOrDown === -1 && numberOfTries > 0) {
         alert('Too low');
+        numberOfTries --;
     }
 });
