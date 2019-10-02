@@ -13,6 +13,7 @@ submitButton.addEventListener('click', () => {
     const sanitizedUserInput = Number(userInput);
     console.log(correctNumber);
     let upOrDown = compareNumbers(sanitizedUserInput, correctNumber);
+    
     if (upOrDown === 0){
         highOrLow.textContent = 'YOU WINNNNNNNNN YESSSSSSS';
     } else if (upOrDown === 1 && numberOfTries > 0) {
