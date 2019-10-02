@@ -8,12 +8,15 @@ let numberOfTries = 2;
 const correctNumber = Math.floor((Math.random() * 20) + 1);
 triesDisplay.textContent = numberOfTries + 1;
 
+// Submit button function
 submitButton.addEventListener('click', () => {
+    // function state
     const userInput = guess.value;
     const sanitizedUserInput = Number(userInput);
     console.log(correctNumber);
     let upOrDown = compareNumbers(sanitizedUserInput, correctNumber);
     
+    // function run
     if (upOrDown === 0){
         highOrLow.textContent = 'YOU WINNNNNNNNN YESSSSSSS';
     } else if (upOrDown === 1 && numberOfTries > 0) {
