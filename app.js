@@ -1,9 +1,8 @@
 // Initializing State
 import compareNumbers from './compare-numbers.js';
 const guess = document.getElementById('guess');
-
 const submitButton = document.getElementById('submit-button');
-let numberOfTries = 3;
+let numberOfTries = 2;
 const correctNumber = 12;
 
 submitButton.addEventListener('click', () => {
@@ -18,5 +17,8 @@ submitButton.addEventListener('click', () => {
     } else if (upOrDown === -1 && numberOfTries > 0) {
         alert('Too low');
         numberOfTries --;
+    } else {
+        alert('YOU LOSE :(');
+        submitButton.disabled = true;
     }
 });
