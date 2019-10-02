@@ -1,0 +1,27 @@
+article{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+h1{
+    margin: 15px;
+    text-align: center;
+}
+.game-display{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    margin:15px;
+}
+#submit-button{
+    width: 150px;
+    justify-content: center;
+    align-items: center;
+}
+.change-display{
+    display: flex;
+    flex-direction: column;
+}

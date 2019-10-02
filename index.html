@@ -21,10 +21,16 @@
                 <li>You will be told if your guess is over or under the correct answer!</li>
             </ul>
         </section>
-        <section>
+        <section class="game-display">
             <header><h3>Good Luck!</h3></header>
-            <input id="guess"></input>
+            <input id="guess" type="number"></input>
             <input id="submit-button" type="submit" value="Guess">
+        </section>
+        <section class="change-display">
+            <div>
+                <span>Tries Remaining: </span><span id="number-of-tries"></span>
+            </div>
+            <span id="high-or-low"></span>
         </section>
     </article>
     <script type="module" src="app.js"></script>
